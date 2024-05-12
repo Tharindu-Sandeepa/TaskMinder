@@ -6,13 +6,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.os.Handler
 import androidx.appcompat.app.AlertDialog
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+
+        // Display the loading screen
+        setContentView(R.layout.loading_screen)
+        // Handler to delay transition to activity_main.xml
+        Handler().postDelayed({
+            // Switch to activity_main.xml after 3 seconds
+            setContentView(R.layout.activity_main)
+            initViews()
+        }, 2000)
+    }
+
+    private fun initViews() {
         val nom = findViewById<EditText>(R.id.nom)
         val Prenom = findViewById<EditText>(R.id.Prenom)
 
