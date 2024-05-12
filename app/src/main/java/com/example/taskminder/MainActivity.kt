@@ -22,31 +22,7 @@ class MainActivity : AppCompatActivity() {
         val connexion = findViewById<Button>(R.id.modifier)
        // val Annuler = findViewById<Button>(R.id.annuler)
         val buttonTaskList =findViewById<Button>(R.id.buttonTaskList)
-//        Annuler.setOnClickListener {
-//            val alertDialogBuilder = AlertDialog.Builder(this)
-//            alertDialogBuilder.apply {
-//                setTitle("Confirmation")
-//                setMessage("Are you sure to cancel?")
-//                setPositiveButton("Yes") { dialog, _ ->
-//                    nom.text.clear()
-//                    Prenom.text.clear()
-////                    tel.text.clear()
-////                    email.text.clear()
-////                    login.text.clear()
-////                    motpass.text.clear()
-//                    dialog.dismiss()
-//                }
-//                setNegativeButton("No") { dialog, _ ->
-//                    dialog.dismiss()
-//                }
-//            }
-//
-//
-//
-//
-//            val alertDialog = alertDialogBuilder.create()
-//            alertDialog.show()
-//        }
+
 
         buttonTaskList.setOnClickListener {
             val intent = Intent(this, TaskList::class.java)
@@ -57,10 +33,7 @@ class MainActivity : AppCompatActivity() {
             val values = ContentValues()
             values.put(tasksConnect.tasksDBC.COLUMN_NAME_NOM, nom.text.toString())
             values.put(tasksConnect.tasksDBC.COLUMN_NAME_PRENOM, Prenom.text.toString())
-//        values.put(EtudiantConnect.EtudiantDBC.COLUMN_NAME_PHONE, tel.text.toString())
-//        values.put(EtudiantConnect.EtudiantDBC.COLUMN_NAME_EMAIL, email.text.toString())
-//        values.put(EtudiantConnect.EtudiantDBC.COLUMN_NAME_LOGIN, login.text.toString())
-//        values.put(EtudiantConnect.EtudiantDBC.COLUMN_NAME_MDP, motpass.text.toString())
+
 
             val mDbHelper = DBHelper(applicationContext)
             val db = mDbHelper.writableDatabase
