@@ -15,12 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val nom = findViewById<EditText>(R.id.nom)
         val Prenom = findViewById<EditText>(R.id.Prenom)
-//        val tel = findViewById<EditText>(R.id.tel)
-//        val email = findViewById<EditText>(R.id.email)
-//        val login = findViewById<EditText>(R.id.login)
-//        val motpass = findViewById<EditText>(R.id.motpass)
+
         val connexion = findViewById<Button>(R.id.modifier)
-       // val Annuler = findViewById<Button>(R.id.annuler)
+
         val buttonTaskList =findViewById<Button>(R.id.buttonTaskList)
 
 

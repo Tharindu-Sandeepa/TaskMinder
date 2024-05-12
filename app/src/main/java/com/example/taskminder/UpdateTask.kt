@@ -24,26 +24,9 @@ class UpdateTask : AppCompatActivity(){
     prenomEditText.setText(prenom)
 
         val connexion = findViewById<Button>(R.id.modifier)
-       // val Annuler = findViewById<Button>(R.id.annuler)
+
         connexion.setText("Update")
-//        Annuler.setOnClickListener {
-//            val alertDialogBuilder = AlertDialog.Builder(this)
-//            alertDialogBuilder.apply {
-//                setTitle("Confirmation")
-//                setMessage("Are you sure to cancel?")
-//                setPositiveButton("Yes") { dialog, _ ->
-//                    nomEditText.text.clear()
-//                 prenomEditText.text.clear()
-//                    dialog.dismiss()
-//                }
-//                setNegativeButton("No") { dialog, _ ->
-//                    dialog.dismiss()
-//                }
-//            }
-//
-//            val alertDialog = alertDialogBuilder.create()
-//            alertDialog.show()
-//        }
+
         connexion.setOnClickListener {
             val name = nom
             val values = ContentValues()

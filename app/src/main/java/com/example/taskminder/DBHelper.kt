@@ -11,13 +11,6 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
     }
     private var taskDBHelper: DBHelper? = null
 
-    fun getEtudiantDBHelper(context: Context): DBHelper {
-        return taskDBHelper ?: synchronized(this) {
-            val instance = DBHelper(context)
-            taskDBHelper = instance
-            instance
-        }
-    }
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(tasksConnect.tasksDBC.SQL_CREATE_ENTRIES)
